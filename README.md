@@ -8,7 +8,8 @@ This application will allow users to register and sign in, and search and save b
 
 Without logging in, users can search for businesses and see past searches and all businesses that came up as results. Registered users can create lists of businesses and rate businesses.The app allows users to delete entire lists and individual items in their lists, usrs can also update the name of their lists as well. All search results come back as links to their yelp pages where users can learn more about the businesses.
 
-There are no additional modules that need to be installed to run this application. To make API request, import your own api key assigned to variable "key" in a file called "yelp_key"
+There are no additional modules that need to be installed to run this application. To make API request, import your own api key assigned to variable "key" in a file called "yelp_key".
+
 I kept my database name as 'SI364projectplanJESSVU' because when I changed it, my code stopped running as it should.
 
 
@@ -103,15 +104,4 @@ I kept my database name as 'SI364projectplanJESSVU' because when I changed it, m
 - [ ]  (100 points) Implement user sign-in with OAuth (from any other service), and include that you need a *specific-service* account in the README, in the same section as the list of modules that must be installed.
 
 
-## **To submit**
-- Commit all changes to your git repository. Should include at least the files:
-  - `README.md`
-  - `SI364final.py`
-  - A `templates/` directory with all templates you have created inside it
-  - May include others (e.g. may include a `static` folder if you are including or uploading static files, but this is not necessary!)
-- Your GitHub repository should be private! (Check out how to get a Student Developer Pack to do so.)
-- Create a GitHub account called `364final` on your GitHub account. (You are NOT forking and cloning anything this time, you are creating your own repo from start to finish.)
-  - Invite users `aerenchyma` (Jackie), `pandeymauli` (Mauli) and `Watel` (Sonakshi, or `sonakshi@umich.edu`) as collaborators on the repository. [Here's the reminder of how to add a collaborator to a repository](https://www.dropbox.com/s/d6btsfxgh6z84bx/Screenshot%202018-02-13%2021.32.11.png?dl=0).
-- Submit the *link* to your GitHub repository to the **SI 364 Final Project** assignment on our Canvas site. The link should be of the form: `https://github.com/YOURGITHUBUSERNAME/364final` (if it doesn't look like that, you are probably linking to something specific *inside* the repo, so make sure it does look like that).
 
-All set!# 364Final
