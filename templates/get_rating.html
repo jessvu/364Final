@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block navigation %}
+ {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+<html>
+<title>Rating Form</title>
+<body>
+<form action="http://localhost:5000/getrating" method = "GET">
+  {{ form.hidden_tag() }}
+<!--   {% for message in get_flashed_messages() %}
+  {{ message }}
+  {% endfor %} -->
+<h3>{{ form.name_business.label }}: {{ form.name_business() }}</h3>
+<h3>{{ form.location_business.label }}: {{ form.location_business() }}</h3>
+<h3>{{ form.rating.label }} {{ form.rating() }}</h3>
+{{ form.submit() }}
+</form>
+<a href="{{ url_for('businesses_and_ratings')}}">See all ratings saved</a><br>
+</body>
+</html>
+
+<div>
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+</div>
+
+
+{% endblock %}

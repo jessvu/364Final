@@ -1,0 +1,32 @@
+<h1>My lists</h1>
+
+{% extends 'base.html' %}
+
+{% block navigation %}
+ {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+
+<ul>
+{% for l in lists %}
+    <li>
+   	 	<a href="http://localhost:5000/list/{{ l.id }}">{{ l.title }}</a>
+   	 	<br>
+    	<form method="POST" action="/update/{{ l.title }}">
+    		{{ form1.hidden_tag() }}
+    	  {{ form1.submit() }}
+    	</form>  
+
+    	  <form method="POST" action="/delete/{{ l.title }}">
+    	  	{{ form2.submit }}
+	</form>
+	</li>
+{% endfor %}
+</ul>
+
+{% if not lists %}
+There are no saved lists to show.
+{% endif %}
+
+{% endblock %}

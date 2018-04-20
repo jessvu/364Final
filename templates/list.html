@@ -1,0 +1,29 @@
+<h1>{{ L.title }}</h1>
+{% extends 'base.html' %}
+
+{% block navigation %}
+ {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+
+{% for biz in businesses %}
+      <strong>{{ biz.name }}</strong>
+      <p>{{ biz.business_location }}</p>
+       <p><a href={{ biz.url }}>More Info </a></p>
+       <form method="POST" action="/delete_business/{{ biz.name }}">
+       		{{form.hidden_tag() }}
+    	  {{ form.submit() }}
+       	</form>
+    <br><br>
+{% endfor %}
+
+{% if not businesses %}
+There are no saved businesses to show.
+{% endif %}
+
+
+
+{% endblock %}
+
+

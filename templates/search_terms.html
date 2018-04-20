@@ -1,0 +1,16 @@
+<h1>See all of your searches</h1>
+
+{% extends 'base.html' %}
+
+{% block navigation %}
+    {{ super() }}
+{% endblock %}
+
+
+{% block main_content %}
+    <ul>
+    {% for t in all_terms %}
+        <li><a href="{{ url_for('search_results', name=t.business_search, location=t.location_search) }}">{{ t.business_search }} {{ t.location_search }}</a> </li><br>
+    {% endfor %}
+    </ul>
+{% endblock %}

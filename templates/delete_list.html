@@ -1,0 +1,13 @@
+<form method="POST" action="/delete/{{ lst_title }}">
+	{{ form.hidden_tag() }}
+	{{form.deleteBusiness.label }} {{ form.deleteBusiness() }}
+	{{ form.submit() }}
+</form>
+
+<div>
+{% for message in get_flashed_messages() %}
+{{ message }}
+{% endfor %}
+</div>
+
+<a href="{{ url_for('lists') }}">Go back and see your lists</a>

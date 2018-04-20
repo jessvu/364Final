@@ -1,0 +1,32 @@
+<h1>Search results for '{{ business_search }}' in '{{ location_search }}'</h1>
+{% extends 'base.html' %}
+
+{% block navigation %}
+ {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+
+<ul>
+{% for biz in businesses %}
+<li>
+  <h4>{{ biz.name }}</h4>
+  <p>{{ biz.business_location }}</p>
+  <p><a href={{ biz.url }}>More Info </a></p>
+</li>
+<br>
+{% endfor %}
+</ul>
+
+{% if not businesses %}
+There are no saved businesses to show.
+{% endif %}
+
+<div>
+{% for message in get_flashed_messages() %}
+<strong>*** {{ message }} ***</strong>
+{% endfor %}
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block navigation %}
+ {{ super() }}
+{% endblock %}
+
+{% block main_content %}
+
+<h2>Business Ratings</h2>
+<ul>
+{% for rt in ratings %}
+    <li><p><i>{{ rt }}</p></li>
+
+{% endfor %}
+</ul>
+
+{% if not ratings %}
+There are no saved businesses to show.
+{% endif %}
+
+{% endblock %}
